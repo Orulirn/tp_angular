@@ -1,12 +1,12 @@
 <p>my-component works!</p>
 <form>
     <label>insérez l'id du pokemon</label><br>
-    <input [(ngModel)]="pokemon_id" type="text" id="pokemon_id" name="pokemon_id">
-    <input value="{{selected_pokemon}}" readonly>
+<input [(ngModel)]="pipe_text" type="text" id="pokemon_id" name="pokemon_id" placeholder="Rechercher">    <input value="{{selected_pokemon}}" readonly>
 </form>
 <select [(ngModel)]="selected_pokemon">
     <option value="" disabled selected>Choisir son pokemon</option>
-    <option *ngFor="let pokemon of pokemonList" [value]="pokemon.id">
+    <option *ngFor="let pokemon of pokemonList | filterPokemonPipe:'nom':pipe_text" [value]="pokemon.id">
         {{ pokemon.nom }}
     </option>
 </select>
+<button (click)="onGo()">Go !</button>
