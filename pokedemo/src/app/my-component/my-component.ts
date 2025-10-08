@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './my-component.css'
 })
 export class MyComponent {
-
+  pokemon_id: string = '';
 }
