@@ -1,59 +1,33 @@
-# Pokedemo
+# TP Angular - Pokédex
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.3.
+**Ewen CARRÉ**
 
-## Development server
+## Description du projet
 
-To start a local development server, run:
+Ce projet consiste à développer un simili Pokédex en utilisant Angular. L'application permet de rechercher et afficher des informations sur les pokémons en se connectant à l'API PokéAPI. L'utilisateur peut filtrer les pokémons par leur nom et visualiser l'ensemble de ses détails (image, statistiques, types…).
 
+## Lancement du front
+
+Pour lancer le projet, suivez les étapes suivantes :
+
+1. Cloner le repo :
 ```bash
-ng serve
+git clone https://github.com/Orulirn/tp_angular.git
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+2. Se placer dans le dossier du projet :
 ```bash
-ng generate component component-name
+cd pokedemo
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
+3. Installer les dépendances (si c'est la première utilisation) :
 ```bash
-ng generate --help
+npm install
 ```
 
-## Building
-
-To build the project run:
-
+4. Lancer le serveur :
 ```bash
-ng build
+ng serve --open
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+L'application sera accessible sur http://localhost:4200
