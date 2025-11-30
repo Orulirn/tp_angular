@@ -1,12 +1,20 @@
-<p>my-component works!</p>
-<form>
-    <label>insérez l'id du pokemon</label><br>
-<input [(ngModel)]="pipe_text" type="text" id="pokemon_id" name="pokemon_id" placeholder="Rechercher">    <input value="{{selected_pokemon}}" readonly>
-</form>
-<select [(ngModel)]="selected_pokemon">
-    <option value="" disabled selected>Choisir son pokemon</option>
-    <option *ngFor="let pokemon of pokemonList | filterPokemonPipe:'nom':pipe_text" [value]="pokemon.id">
-        {{ pokemon.nom }}
-    </option>
-</select>
-<button (click)="onGo()">Go !</button>
+<mat-form-field appearance="outline">
+  <mat-label>Rechercher un pokémon</mat-label>
+  <input matInput [(ngModel)]="pipe_text" placeholder="Nom du pokémon">
+</mat-form-field>
+
+<mat-form-field appearance="outline">
+  <mat-label>ID sélectionné</mat-label>
+  <input matInput [value]="selected_pokemon" readonly>
+</mat-form-field>
+
+<mat-form-field appearance="outline">
+  <mat-label>Choisir son pokémon</mat-label>
+  <mat-select [(ngModel)]="selected_pokemon">
+    <mat-option *ngFor="let pokemon of pokemonList | filterPokemonPipe:'nom':pipe_text" [value]="pokemon.id">
+      {{ pokemon.nom }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<button mat-raised-button color="primary" (click)="onGo()">Go !</button>
